@@ -1,0 +1,23 @@
+extends layouts/login-and-registration-layout
+
+block content
+
+    h3 login
+
+    div
+        input#loginEmail(name='loginEmail' value='' type='email' placeholder='Email')
+
+    div
+        input#loginPassword(name='loginPassword' value='' type='password' placeholder='Password')
+
+    div
+        button#btn Login
+
+    span.error
+
+
+    h3 registration
+
+    div
+        button
+            a(href='/registration') Registration
