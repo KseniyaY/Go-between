@@ -1,6 +1,7 @@
 $(function(){
     login();
-    registration();
+    register();
+    setup();
 
 });
 
@@ -34,7 +35,7 @@ function login(){
 
 
 
-function registration(){
+function setup(){
 
     $('#saveData').on('click', function(){
 
@@ -74,11 +75,11 @@ function registration(){
         };
 
         $.ajax({
-            url: "/registration",
+            url: "/settings",
             type: "POST",
             data: data,
             success: function(){
-                window.location.href = "/users"
+                window.location.href = "/user"
             },
             error: function(){
                 alert('error saving new user')
@@ -87,5 +88,36 @@ function registration(){
         });
     });
 
+}
+
+function register(){
+
+    $('#register').on('click', function(){
+
+        var email = $('#email');
+        var firstName = $('#firstName');
+        var secondName = $('#secondName');
+        var password = $('#password');
+
+        var data = {
+            email: email.val(),
+            firstName: firstName.val(),
+            secondName: secondName.val(),
+            password: password.val()
+        };
+
+        $.ajax({
+            url: "/registration",
+            type: "POST",
+            data: data,
+            success: function(){
+                window.location.href = "/settings"
+            },
+            error: function(){
+                alert('error saving new user')
+            }
+
+        });
+    });
 }
 

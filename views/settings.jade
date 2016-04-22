@@ -1,0 +1,92 @@
+extends layouts/login-and-registration-layout
+
+block content
+
+    h1 Settings
+
+    div
+        p Email
+        input#email(name='email' value='#{user.email}' type='email' placeholder='Email')
+
+    div
+        p First Name
+        input#firstName(name='firstName' value='#{user.firstName}' type='text' placeholder='First Name')
+
+    div
+        p Second Name
+        input#secondName(name='secondName' value='#{user.secondName}' type='text' placeholder='Second Name')
+
+    div
+        p Birthday
+        input#birthday(name='birthday' type='date')
+
+    div
+        p Sex
+        form
+            span Male
+            input.sex(name='sex' type='radio' value='Male')
+            span Female
+            input.sex(name='sex' type='radio' value='Female')
+            span Both
+            input.sex(name='sex' type='radio' value='Both')
+
+    div
+        p Sexual Preferences
+        form
+            span Man
+            input.sexualPreferences(name='sexualPreferences' value='man' type='radio')
+            span Woman
+            input.sexualPreferences(name='sexualPreferences' value='woman' type='radio')
+            span Both
+            input.sexualPreferences(name='sexualPreferences' value='both' type='radio')
+
+    div
+        p Location
+        input#place(name='place' value='' type='text' placeholder='Location')
+
+    div
+        p Education
+        input#education(name='education' value='' type='text' placeholder='Education')
+
+    div
+        p Profession
+        input#profession(name='profession' value='' type='text' placeholder='Profession')
+
+    div
+        p Interests:
+        form
+            span Dating & Relationship
+            input.interests(name='interests' type='checkbox' value='Dating & Relationship')
+            span Hobbies & Interests
+            input.interests(name='interests' type='checkbox' value='Hobbies & Interests')
+            span Sport & Activities
+            input.interests(name='interests' type='checkbox' value='Sport & Activities')
+            span Friendship & Roommates
+            input.interests(name='interests' type='checkbox' value='Friendship & Roommates')
+            span Co-working & Start-ups
+            input.interests(name='interests' type='checkbox' value='Co-working & Start-ups')
+            span Other
+            input.interests#other(name='interests' type='checkbox' value='')
+            input.interests#otherInterests(name='interests' type='text' placeholder='Other' value='')
+
+    div
+        p Personal Information
+        input#personalInfo(name='personalInfo' value='' type='text' placeholder='Personal Information')
+
+    div
+        p Password
+        input#password(name='password' value='' type='password' placeholder='Password')
+
+    div
+        p Confirm Password
+        input#confirm-password(name='confirm-password' value='' type='password' placeholder='Password')
+
+    div
+        p Load Photo (НЕ РАБОТАЕТ)
+        form(role='form', method='post', enctype='multipart/form-data')
+
+            input#photo(name='photo' type='file')
+
+    div
+        p Save Data
+        button#saveData Save

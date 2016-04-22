@@ -1,25 +1,51 @@
 var express = require('express');
 var router = express.Router();
+var multer  = require('multer');
 var User = require('../models/user').User;
 var ObjectID = require('mongodb').ObjectID;
 var HttpError = require('../error').HttpError;
 var AuthError = require('../models/user').AuthError;
 
+var upload = multer({ dest: 'public/images/users/' });
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('frontpage', { title: 'Express' });
+  console.log(req.session);
 });
 
 // Registration
+
 router.get('/registration', function(req, res, next){
   res.render('registration')
 });
 
 router.post('/registration', function(req, res, next){
-
   var email = req.body.email;
   var firstName = req.body.firstName;
   var secondName = req.body.secondName;
+  var password = req.body.password;
+
+  User.register(email, firstName, secondName, password, function(user){
+
+    req.session.user = user._id;
+    res.send({});
+
+  })
+});
+
+// Settings
+router.get('/settings', function(req, res, next){
+  res.render('settings');
+});
+
+router.post('/settings', function(req, res, next){
+
+  var id = req.session.user;
+  var email = req.body.email;
+  var firstName = req.body.firstName;
+  var secondName = req.body.secondName;
+  var password = req.body.password;
   var birthday = req.body.birthday;
   var sex = req.body.sex;
   var sexualPreferences = req.body.sexualPreferences;
@@ -28,11 +54,20 @@ router.post('/registration', function(req, res, next){
   var profession = req.body.profession;
   var interests = req.body.interests;
   var personalInfo = req.body.personalInfo;
-  var password = req.body.password;
 
-  User.register(email, password, firstName, secondName, birthday, sex, sexualPreferences, location, education, profession, interests, personalInfo, function(user){
+
+  User.updateUser(id, email, firstName, secondName, password, birthday, sex, sexualPreferences, location, education, profession, interests, personalInfo, function(err, user){
+
+    if (err) {
+      if (err instanceof AuthError) {
+        return next(new HttpError(403, err.message));
+      } else {
+        return next(err);
+      }
+    }
 
     req.session.user = user._id;
+    console.log("This is " + req.session.user);
     res.send({});
 
   });
@@ -66,7 +101,8 @@ router.get('/user/:id', function (req, res, next) {
 
 router.get('/logout', function(req, res, next){
   req.user = res.locals.user = null;
-  res.send('done')
+  req.session.destroy();
+  console.log(req.user)
 });
 
 router.post('/', function (req, res, next) {
@@ -88,6 +124,10 @@ router.post('/', function (req, res, next) {
     res.send({});
 
   });
+});
+
+router.get('/user', function(req, res, next){
+  res.render('user')
 });
 
 module.exports = router;

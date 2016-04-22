@@ -49,6 +49,10 @@ var schema = new Schema({
     personalInfo:{
         type: String
     },
+    photo:{
+        data: Buffer,
+        contentType: String
+    },
     created: {
         type: Date,
         default: Date.now
@@ -83,6 +87,7 @@ schema.statics.authorize = function(email, password, callback){
         function (user, callback){
             if (user) {
                 if (user.checkPassword(password)){
+                    console.log(user);
                     callback(null, user);
                 } else {
                     callback(new AuthError("Wrong password"));
@@ -90,39 +95,57 @@ schema.statics.authorize = function(email, password, callback){
             } else {
                 return callback(new AuthError("Register first"))
             }
-            //else {
-            //    var user = new User({email: email, password: password});
-            //    user.save(function(err){
-            //        if(err) return callback(err);
-            //        callback(null, user);
-            //    });
-            //}
         }
     ], callback);
 };
 
-schema.statics.register = function(email, password, firstName, secondName, birthday, sex, sexualPreferences, location, education, profession, interests, personalInfo, callback){
+
+schema.statics.register = function(email, firstName, secondName, password, callback){
     var User = this;
 
     var user = new User({
         email: email,
-        password: password,
         firstName: firstName,
         secondName: secondName,
-        birthday: birthday,
-        sex: sex,
-        sexualPreferences: sexualPreferences,
-        location: location,
-        education: education,
-        profession: profession,
-        interests: interests,
-        personalInfo: personalInfo
+        password: password
     });
     console.log('Data to DB' + user);
     user.save(function(){
+        console.log('User saved');
         callback(user);
     });
 };
+
+schema.statics.updateUser = function(id, email, firstName, secondName, password, birthday, sex, sexualPreferences, location, education, profession, interests, personalInfo, callback){
+    var User = this;
+
+    async.waterfall([
+        function(callback){
+            User.findOne({_id: id}, callback)
+        },
+        function(user, callback){
+            if (user){
+                user.email = email;
+                user.firstName = firstName;
+                user.secondName = secondName;
+                user.password = password;
+                user.birthday = birthday;
+                user.sex = sex;
+                user.sexualPreferences = sexualPreferences;
+                user.location = location;
+                user.education = education;
+                user.profession = profession;
+                user.interests = interests;
+                user.personalInfo = personalInfo;
+                user.save(function(err){
+                    if(err) return callback(err);
+                    callback(null, user)
+                })
+            }
+        }
+    ], callback);
+};
+
 
 exports.User = mongoose.model('User', schema);
 
