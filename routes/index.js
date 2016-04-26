@@ -8,6 +8,16 @@ var AuthError = require('../models/user').AuthError;
 
 var upload = multer({ dest: 'public/images/users/' });
 
+
+// Ксюша сюда вставляй свой рут
+
+//router.get('/имя', function(req, res, next){
+//  res.render('имя документа во views без .jade')
+// })
+
+
+
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('frontpage', { title: 'Express' });
