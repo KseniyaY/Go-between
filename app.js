@@ -5,6 +5,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var lessMiddleware = require('less-middleware');
 
 var config = require('./config');
 var mongoose = require('./lib/mongoose');
@@ -30,6 +31,13 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
+
+app.use(lessMiddleware(__dirname + '/less',{
+  debug: true,
+  dest: path.join(__dirname + '/public')
+}
+));
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 
