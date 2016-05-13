@@ -1,0 +1,164 @@
+main.mainContent
+  div#carousel-example-generic.carousel.slide(data-ride='carousel')
+    // Wrapper for slides
+    .carousel-inner(role='listbox')
+      .item.active
+        img(src='images/slide_1.jpg', alt='Become online')
+                         
+      .item
+        img(src='images/slide_2.jpg', alt='Make perfect relations')
+                          
+      .item
+        img(src='images/slide_3.jpg', alt='Bring it into your real life')
+                    
+    // Controls
+    a.left.carousel-control(href='#carousel-example-generic', role='button', data-slide='prev')
+      span.icon-prev(aria-hidden='true')
+          
+      span.sr-only Previous
+      
+    a.right.carousel-control(href='#carousel-example-generic', role='button', data-slide='next')
+      span.icon-next(aria-hidden='true')
+          
+      span.sr-only Next
+    // Indicators
+    ol.carousel-indicators
+      li.active(data-target='#carousel-example-generic', data-slide-to='0')
+          
+      li(data-target='#carousel-example-generic', data-slide-to='1')
+          
+      li(data-target='#carousel-example-generic', data-slide-to='2')
+    
+  article#collapse1.serviceDescr.collapse
+    h2.serviceDisplayTitle About service and participation
+      
+    p.serviceDisplayText
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+      More detailed description of choosen scope will be placed here. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+  
+    
+  article#collapse2.serviceDescr.collapse
+    h2.serviceDisplayTitle What&apos;s really our mission about
+      
+    p.serviceDisplayText
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+      More detailed description of choosen scope will be placed here. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+    
+  article#collapse3.serviceDescr.collapse
+    h2.serviceDisplayTitle What are our rules for?
+      
+    p.serviceDisplayText
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+      More detailed description of choosen scope will be placed here. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+    
+  article#collapse4.serviceDescr.collapse
+    h2.serviceDisplayTitle Our happy members are pleased to share their amazing stories
+      
+    p.serviceDisplayText
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+      More detailed description of choosen scope will be placed here. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+    
+  article#collapse5.serviceDescr.collapse
+    h2.serviceDisplayTitle Want tips to get involved and become successful in relations?
+      
+    p.serviceDisplayText
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+      More detailed description of choosen scope will be placed here. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+  //
+    <div class="hr"></div>
+  article.scopesDescr
+    h2 Scopes
+      
+    .scopesGallery
+      .row
+        .col-main_size.col-xs-12.col-sm-6.col-md-2
+          .thumbnail
+            img(src='images/love_relationships_resized.jpg', alt='love&relationship')
+                  
+            .caption
+              h4 Dating &amp; Relationship
+                      
+              p.btns
+                a.btn.btn-primary.scopeButtStyle(data-toggle='collapse', href='#scopeDisplay1', aria-expanded='false', aria-controls='scopeDisplay1', role='button') Learn more
+           
+        .col-main_size.col-xs-12.col-sm-6.col-md-2
+          .thumbnail
+            img(src='images/hobbies_interests_resized.jpg', alt='hobbies&interests')
+                  
+            .caption
+              h4 Hobbies &amp; Interests
+                      
+              p.btns
+                a.btn.btn-primary.scopeButtStyle(data-toggle='collapse', href='#scopeDisplay2', aria-expanded='false', aria-controls='scopeDisplay2', role='button') Learn more
+           
+        .col-main_size.col-xs-12.col-sm-6.col-md-2
+          .thumbnail
+            img(src='images/sports_activities_resized.jpg', alt='sport&activities')
+                  
+            .caption
+              h4 Sport &amp; Activities
+                      
+              p.btns
+                a.btn.btn-primary.scopeButtStyle(data-toggle='collapse', href='#scopeDisplay3', aria-expanded='false', aria-controls='scopeDisplay3', role='button') Learn more
+           
+        .col-main_size.col-xs-12.col-sm-6.col-md-2
+          .thumbnail
+            img(src='images/friendship_roommates_resized.jpg', alt='friendship&roommates')
+                  
+            .caption
+              h4 Friendship &amp; Roommates
+                      
+              p.btns
+                a.btn.btn-primary.scopeButtStyle(data-toggle='collapse', href='#scopeDisplay4', aria-expanded='false', aria-controls='scopeDisplay4', role='button') Learn more
+           
+        .col-main_size.col-xs-12.col-sm-6.col-md-2.lastchild
+          .thumbnail
+            img(src='images/business_startups_resized.jpg', alt='start-ups')
+                  
+            .caption
+              h4 Co-working &amp; Start-ups
+                      
+              p.btns
+                a.btn.btn-primary.scopeButtStyle(data-toggle='collapse', href='#scopeDisplay5', aria-expanded='false', aria-controls='scopeDisplay5', role='button') Learn more
+      
+    div
+      p#scopeDisplay1.scope.collapse
+        More detailed description of &quot;Dating &amp; relationship&quot; scope will be placed here. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+        More detailed description of choosen scope will be placed here. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+      
+    div
+      p#scopeDisplay1.scope.collapse
+        More detailed description of &quot;Dating &amp; relationship&quot; scope will be placed here. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+        More detailed description of choosen scope will be placed here. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+    
+      
+    div
+      p#scopeDisplay1.scope.collapse
+        More detailed description of &quot;Dating &amp; relationship&quot; scope will be placed here. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+        More detailed description of choosen scope will be placed here. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+    
+      
+    div
+      p#scopeDisplay2.scope.collapse
+        More detailed description of &quot;Hobbies &amp; interests&quot; scope will be placed here. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+        More detailed description of choosen scope will be placed here. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+    
+      
+    div
+      p#scopeDisplay3.scope.collapse
+        More detailed description of &quot;Sport &amp; activities&quot; scope will be placed here. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+        More detailed description of choosen scope will be placed here. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+    
+      
+    div
+      p#scopeDisplay4.scope.collapse
+        More detailed description of &quot;Friendship &amp; roommates&quot; scope will be placed here. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+        More detailed description of choosen scope will be placed here. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+    
+      
+    div
+      p#scopeDisplay5.scope.collapse
+        More detailed description of &quot;Co-working &amp; start-ups&quot; scope will be placed here. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+        More detailed description of choosen scope will be placed here. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+
+.clearfix
