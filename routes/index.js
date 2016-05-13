@@ -15,6 +15,12 @@ var upload = multer({ dest: 'public/images/users/' });
 //  res.render('имя документа во views без .jade')
 // })
 
+
+router.get('/jade', function(req, res, next) {
+  res.render('main_page.jade');
+});
+
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('frontpage', { title: 'Express' });
