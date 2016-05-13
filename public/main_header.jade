@@ -1,0 +1,78 @@
+header.headWrapper
+          .headContent
+            .headerBg
+              .headerContainer(ng-app='')
+                aside.adContent(ng-app='', ng-init='firstName;lastName')
+                  .logo go-between.
+                    span.logoDomain com
+                  h1.slogan Let your gleam be seen from everywhere
+                  h2.projectDescr A unique service which helps you to build your own perfect community
+                  p.greeting(ng-show='firstName') Welcome {{firstName + " " + lastName}}!
+                
+                .forms
+                  form.formInline(ng-app='myForm', name='logIn', method='post', action='', onsubmit='return validateLogin(this.login.value)')
+                    // Можно добавить в action имя html файла, который мы хотим загрузить после того, как отработает submit, как это представлено в форме ниже, а можно на форму почесить метод onsubmit и написать для него функцию, напр., валидацию логина на соответствие условиям, прописанным в регулярных выражениях, как это сделано в данной форме для логина якобы существующего пользователя
+                    .loginForm
+                      .form-group.login
+                        input.login(type='text', name='login', placeholder='Enter your login', required='')
+                        input.checkbox-inline.rememberMe(type='checkbox', value='1')
+                        label.rememberMe(for='login') Remember me
+                      
+                      
+                      .form-group.password
+                        input.login(type='password', name='forPassword', placeholder='Enter your password', required='')
+                        
+                        label.forgotPass(for='password')
+                          a(href='#') Have you forgotten login details?
+                      
+                      .form-group.loginAsMember
+                        button#clickToLogin.btn.btn-primary.logButtStyle(role='button', type='submit') Login
+                          br
+                          span as a member
+                  
+                  form.registration(ng-app='', name='register', method='post', action='SPA.html')
+                    // В данном случае применяю переход на страницу профиля через назначение файла для перехода в атрибуте action и не вешаю событие onsubmit, т.к. пока не написана функция валидации формы на специфические условия и т.д., кроме валидации на заполнение обязательных полей
+                    h3.toggle Register for free
+                      span.fa.fa-chevron-circle-down
+                    
+                    .formDataWrapper(ng-app='')
+                      label(for='firstName') First name:
+                      
+                      input(type='text', name='firstName', placeholder='Enter your first name', required='', ng-model='firstName')
+                      
+                      label(for='lastName') Last name:
+                      
+                      input(type='text', name='lastName', placeholder='Enter your last name', required='', ng-model='lastName')
+                      
+                      label(for='date') Birthday*:
+                      
+                      input(type='date', name='forDate', placeholder='Enter your full name', required='')
+                      
+                      label(for='date') Gender &amp;#38 interested in*:
+                      
+                      select.sexOrient(type='text', name='forSex', placeholder='Sex')
+                        option(value='Male') Male
+                        
+                        option(value='Female') Female
+                      
+                      select.sexOrient(type='text', name='forOrientation', placeholder='Orientation')
+                        option(value='Male') Female
+                        
+                        option(value='Female') Male
+                        
+                        option(value='Bisexual') Both
+                       
+                      
+                      label(for='mail') E-mail:
+                      
+                      input(type='email', name='forMail', ng-model='text', pattern='^\S+@\S+\.\S+$', title='name@email.com', placeholder='name@email.com', required='')
+                      
+                      span.hint(ng-show='register.forMail.$error.email') Not a valid e-mail address
+                      
+                      label(for='password') Password:
+                      
+                      input(type='password', name='forPassword', placeholder='Enter your password', required='')
+                      
+                      button.register(type='submit') Submit &amp; Launch
+                      
+                      p *your date of birth and sexual orientation won't be shown in your profile by default
