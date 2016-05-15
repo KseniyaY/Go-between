@@ -2,35 +2,38 @@ var App = App || {};
 
 // App.formValidation = (function () {
 
-function validateLogin(login) {
-		if (/^[a-zA-Z1-9]+$/.test(login) === false) {
-			alert('The login must contain only latin letters');
-			return false;
-		} 
-		if (login.length < 4 || login.length > 20) {
-			alert('The login must contain 4 to 20 symbols');
-			return false;
-		} 
-		if (parseInt(login.substr(0, 1))) {
-			alert('The login must begin with a letter');
-			return false;
-		}
+// ВАЖНО!!!
+ // Откючил валидацию на время тестирование!!!!!! Вместо логина используется email!!!
+
+//function validateLogin(login) {
+		//if (/^[a-zA-Z1-9]+$/.test(login) === false) {
+		//	alert('The login must contain only latin letters');
+		//	return false;
+		//}
+		//if (login.length < 4 || login.length > 20) {
+		//	alert('The login must contain 4 to 20 symbols');
+		//	return false;
+		//}
+		//if (parseInt(login.substr(0, 1))) {
+		//	alert('The login must begin with a letter');
+		//	return false;
+		//}
 	// or just one code line
 		// if(/^[a-zA-z]{1}[a-zA-Z1-9]{3,20}$/.test(login) === false)
 	 //    {alert('It is an appropriate login'); return false;}
-		else {
-			openAccount();
-			return false;
+		//else {
+			//openAccount();
+			//return false;
 			//после вызова функции  openAccount() назначить return false; тогда submit не срабатывает и функция все-равно вызывается и переходит на другую страницу
-		}
+		//}
 
-}
+//}
 
-function openAccount() {
-	window.location = "SPA.html";
+//function openAccount() {
+//	window.location = "SPA.html";
   // window.location.assign("SPA.html");
   // window.open("SPA.html", "menubar=yes,toolbar=yes,scrollbars=yes,resizable=yes");
-}
+//}
 
 
 
@@ -82,6 +85,13 @@ $(document).ready(function(){
 		 interval: 3000 //changes the speed
 	})
 });	
+
+
+
+
+
+
+
 
 
 // var App = App || {};

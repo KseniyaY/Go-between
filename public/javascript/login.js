@@ -1,5 +1,6 @@
 $(function(){
     login();
+    testLogin();
     register();
     setup();
 
@@ -9,7 +10,33 @@ $(function(){
 var loginEmail = $('#loginEmail');
 var loginPassword = $('#loginPassword');
 
+
 function login(){
+
+    $('#clickToLogin').on('click', function(){
+
+        var person = {
+            email: loginEmail.val(),
+            password: loginPassword.val()
+        };
+
+        $.ajax({
+            url: "/",
+            type: "POST",
+            data: person,
+            success: function(){
+                window.location.href = "/users"
+            },
+            error: function(){
+                $('.error').append("register first!!");
+            }
+        });
+    });
+
+}
+
+
+function testLogin(){
 
     $('#btn').on('click', function(){
 
