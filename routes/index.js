@@ -20,6 +20,9 @@ router.get('/', function(req, res, next) {
   res.render('main_page.jade');
 });
 
+router.get('/SPA_page', function(req, res, next) {
+  res.render('SPA_page.jade');
+});
 
 /* GET home page. */
 router.get('/test', function(req, res, next) {

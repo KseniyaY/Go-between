@@ -69,8 +69,9 @@ header.headWrapper
                       
                       label(for='mail') E-mail:
                       // добавил id для jquery
-                      input(type='email', id='email' name='forMail', ng-model='text', pattern='^\S+@\S+\.\S+$', title='name@email.com', placeholder='name@email.com', required='')
+                      input(type='email', id='email' name='forMail', ng-model='text', ng-pattern='/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/', title='name@email.com', placeholder='name@email.com', required='')
                       
+                      //Angular используется для отображения в спане ошибки о неправильно введенном эл. адресе, благодаря использованию директивы ng-show и ангулярного состояния $error
                       span.hint(ng-show='register.forMail.$error.email') Not a valid e-mail address
                       
                       label(for='password') Password:

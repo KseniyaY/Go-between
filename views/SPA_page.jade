@@ -1,0 +1,13 @@
+extends layouts/main_head.jade
+block title 
+	title Dating, friendship, communities, start-ups
+block append head	
+	script(type='text/javascript', src='javascript/SPA_xhr.js')
+	script(type='text/javascript', src='javascript/SPA.js' defer)
+	link(rel='stylesheet', type='text/css', href='stylesheets/SPA.css')
+
+body
+	block content
+		include SPA_header
+		include SPA_nav
+		include SPA_main
