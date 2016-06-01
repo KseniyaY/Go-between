@@ -134,8 +134,8 @@ App.navEvents = (function eventListeners() {
 							<section class="row circlesDisplay">\
 							</section></div>'
 		
-				
-
+		var applicationForm = ''		
+		//используются циклы, так как событие должно срабатывать для всех селекторов класса (мы применяем querySelectorAll и проходимся по всем элементам массива отобранных нодов с названием класса), как для стандартного меню, так и адаптивного под мобильные устройства					
 		for(var i=0; i < goToMyProfile.length; i++) {
 			goToMyProfile[i].addEventListener('click', function (e) {
 				console.log(e);
@@ -177,12 +177,10 @@ App.navEvents = (function eventListeners() {
 		for(var i=0; i < goToMySettings.length; i++) {
 			goToMySettings[i].addEventListener('click', function (e) {
 				console.log(e);
-				contentContainer.innerHTML="";
-				contentContainer.appendChild(underConstruction);
-				underConstruction.setAttribute('class','underConstruction');
-				underConstruction.classList.add('container-fluid');
-				underConstruction.innerHTML = '<span class="fa fa-cogs"></span>' + "Sorry, this section is under construction";
-			})
+				$("main").load("SPA_application.html");
+			})		
+				// document.querySelector(".myProfile").style.display='none';
+				// document.querySelector(".mySettings").style.display='block';
 		}	
 
 	// }

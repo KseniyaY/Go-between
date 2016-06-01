@@ -20,6 +20,7 @@ router.get('/', function(req, res, next) {
   res.render('main_page.jade');
 });
 
+/*Get inner application page*/
 router.get('/SPA_page', function(req, res, next) {
   res.render('SPA_page.jade');
 });
