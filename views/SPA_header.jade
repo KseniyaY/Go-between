@@ -11,7 +11,8 @@ header
         
             .user
               .userName
-                span.fa.fa-user #{user.firstName}
+                span.fa.fa-user 
+                | #{user.firstName}
           
               .logOut(onclick='backHome()')
                 a(href='#') Log out

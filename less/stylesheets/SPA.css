@@ -110,6 +110,7 @@ header .backHome .logOut a:focus {
   position: relative;
   margin: 0 auto;
   min-width: 100%;
+  min-height: 100%;
 }
 .navMask {
   position: absolute;
@@ -189,128 +190,12 @@ header .backHome .logOut a:focus {
   text-decoration: none;
   color: #ffffff;
 }
-.mySettings {
-  display: block;
-  margin: 0px;
-  padding: 7px 15px 5px 15px;
-}
-.mySettings h2 {
-  font-size: 15px;
-  color: #ffffff;
-  text-transform: uppercase;
-  font-weight: bold;
-  text-align: center;
-  padding: 7px 7px 5px 7px;
-  margin: 0 auto;
-  margin-bottom: 10px;
-  background-color: #ff9900;
-}
-.mySettings .application {
-  padding: 7px 15px 5px 15px;
-  margin: 0 auto;
-}
-.mySettings .application h2 {
-  font-size: 15px;
-  color: #ffffff;
-  text-transform: uppercase;
-  font-weight: bold;
-  text-align: center;
-  padding: 7px 7px 5px 7px;
-  margin: 0 auto;
-  margin-bottom: 10px;
-  background-color: #ff9900;
-}
-.mySettings .application .briefInfo,
-.mySettings .application .aboutTitle {
-  box-sizing: border-box;
-  padding: 0px;
-}
-.mySettings .application .briefInfo {
-  text-align: left;
-}
-.mySettings .application .descrQuest,
-.mySettings .application .descrReply {
-  margin: 10px 0px 10px 0px;
-  color: #666666;
-  font-size: 13px;
-  text-align: justify;
-}
-.mySettings .application .briefInfoItems,
-.mySettings .application .interests {
-  padding: 0px 3px 10px 7px;
-}
-.mySettings .application .aboutInfo {
-  padding: 0px;
-  margin-top: 10px;
-}
-.mySettings .application .aboutInfo .aboutTitle {
-  display: block;
-}
-.mySettings .application .aboutInfo .aboutText {
-  display: block;
-  font-size: 13px;
-  text-align: justify;
-  padding: 0px 7px 0px 7px;
-}
-.mySettings .application .interests .tags {
-  margin: 0 auto;
-  padding: 7px 10px 7px 10px;
-  text-align: justify;
-}
-.mySettings .application .interests .btn-primary {
-  background-color: #666666;
-  font-size: 12px;
-  border: none;
-  padding: 6px 7px 6px 7px;
-  margin: 3px 3px 3px 3px;
-}
-.mySettings .application .interests .btn-primary .fa-male,
-.mySettings .application .interests .btn-primary .fa-female {
-  padding: 0px 3px 0px 3px;
-}
-.mySettings .applicationForm {
-  padding: 15px;
-  text-align: justify;
-  border: 1px solid #dad8d8;
-  border-radius: 10px;
-}
-.mySettings .applicationForm .row {
-  padding: 0px 25px 10px 25px;
-  text-align: center;
-}
-.mySettings .applicationForm .row h3 {
-  background-color: #dad8d8;
-}
-.mySettings .applicationForm .row label {
-  font-size: 18px;
-  margin: 5px 0px 5px 0px;
-  font-weight: normal;
-}
-.mySettings .applicationForm .row input,
-.mySettings .applicationForm .row select {
-  margin: 10px 10px;
-  border: solid 1px #ff9900;
-  font-size: 15px;
-  text-align: center;
-  font-size: 14px;
-  border-radius: 5px;
-  width: 100%;
-}
-.mySettings .applicationForm .row option {
-  text-align: center;
-  font-size: 14px;
-}
-.mySettings .applicationForm #saveButton {
-  overflow: hidden;
-  padding: 10px 10px 10px 10px;
-  border-radius: 7px;
-  border: none;
-  color: white;
-  background-color: #e6b800;
-}
 .content {
   margin-left: 225px;
   padding: 30px 20px 30px 10px;
+}
+.content .myProfile {
+  display: none;
 }
 .content .gallery {
   margin: 0px;
@@ -401,6 +286,9 @@ header .backHome .logOut a:focus {
 .content .profileDescr .interests .btn-primary .fa-female {
   padding: 0px 3px 0px 3px;
 }
+.content .myCircles {
+  display: none;
+}
 .content .myCircles .selectScopes {
   background-color: #ff9900;
   color: #ffffff;
@@ -479,6 +367,132 @@ header .backHome .logOut a:focus {
 .content .myCircles .findPeople .del {
   background-color: #ff9900;
   border-color: #ff9900;
+}
+.content .myMessages {
+  display: none;
+}
+.content .findPeople {
+  display: none;
+}
+.content .mySettings {
+  display: block;
+  margin: 0px;
+  padding: 7px 15px 5px 15px;
+}
+.content .mySettings h2 {
+  font-size: 15px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  padding: 7px 7px 5px 7px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  background-color: #ff9900;
+}
+.content .mySettings .application {
+  padding: 7px 15px 5px 15px;
+  margin: 0 auto;
+}
+.content .mySettings .application h2 {
+  font-size: 15px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  padding: 7px 7px 5px 7px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  background-color: #ff9900;
+}
+.content .mySettings .application .briefInfo,
+.content .mySettings .application .aboutTitle {
+  box-sizing: border-box;
+  padding: 0px;
+}
+.content .mySettings .application .briefInfo {
+  text-align: left;
+}
+.content .mySettings .application .descrQuest,
+.content .mySettings .application .descrReply {
+  margin: 10px 0px 10px 0px;
+  color: #666666;
+  font-size: 13px;
+  text-align: justify;
+}
+.content .mySettings .application .briefInfoItems,
+.content .mySettings .application .interests {
+  padding: 0px 3px 10px 7px;
+}
+.content .mySettings .application .aboutInfo {
+  padding: 0px;
+  margin-top: 10px;
+}
+.content .mySettings .application .aboutInfo .aboutTitle {
+  display: block;
+}
+.content .mySettings .application .aboutInfo .aboutText {
+  display: block;
+  font-size: 13px;
+  text-align: justify;
+  padding: 0px 7px 0px 7px;
+}
+.content .mySettings .application .interests .tags {
+  margin: 0 auto;
+  padding: 7px 10px 7px 10px;
+  text-align: justify;
+}
+.content .mySettings .application .interests .btn-primary {
+  background-color: #666666;
+  font-size: 12px;
+  border: none;
+  padding: 6px 7px 6px 7px;
+  margin: 3px 3px 3px 3px;
+}
+.content .mySettings .application .interests .btn-primary .fa-male,
+.content .mySettings .application .interests .btn-primary .fa-female {
+  padding: 0px 3px 0px 3px;
+}
+.content .mySettings .applicationForm {
+  padding: 15px;
+  text-align: justify;
+  border: 1px solid #dad8d8;
+  border-radius: 10px;
+}
+.content .mySettings .applicationForm .row {
+  padding: 0px 25px 10px 25px;
+  text-align: center;
+}
+.content .mySettings .applicationForm .row h3 {
+  background-color: #dad8d8;
+}
+.content .mySettings .applicationForm .row label {
+  font-size: 18px;
+  margin: 5px 0px 5px 0px;
+  font-weight: normal;
+}
+.content .mySettings .applicationForm .row input,
+.content .mySettings .applicationForm .row select {
+  margin: 10px 10px;
+  border: solid 1px #ff9900;
+  font-size: 15px;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 5px;
+  width: 100%;
+}
+.content .mySettings .applicationForm .row option {
+  text-align: center;
+  font-size: 14px;
+}
+.content .mySettings .applicationForm #saveButton {
+  overflow: hidden;
+  width: 50%;
+  padding: 10px 10px 10px 10px;
+  border-radius: 7px;
+  border: none;
+  color: white;
+  background-color: #e6b800;
 }
 @media all and (max-width: 1000px) {
   header .logo {

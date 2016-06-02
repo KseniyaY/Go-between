@@ -92,17 +92,14 @@ header {
 } 
 
 
-	.mySettings {
-		.mySettingsMixin();
-	}
 	
 .content {
-	// .myProfile {
-	
+
 	.contentMixin();
 
-	
-
+	.myProfile {
+		display: none;
+	};
 		
 	.gallery {
 		.galleryMixin();
@@ -127,6 +124,7 @@ header {
 	// }
 
 	.myCircles {
+		display: none;
 
 		.selectScopes {
 			.selectScopesMixin();
@@ -144,6 +142,18 @@ header {
 			.circlesDisplayMixin();
 		}
 		
+	}
+
+	.myMessages {
+		display: none;
+	}
+
+	.findPeople {
+		display: none;
+	}
+
+	.mySettings {
+		.mySettingsMixin();
 	}
 
 }

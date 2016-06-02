@@ -4,10 +4,12 @@ block title
 block append head	
 	script(type='text/javascript', src='javascript/SPA_xhr.js')
 	script(type='text/javascript', src='javascript/SPA.js' defer)
+	script(type='text/javascript', src='javascript/SPA_navigation.js' defer)
 	link(rel='stylesheet', type='text/css', href='stylesheets/SPA.css')
 
 body
 	block content
 		include SPA_header
-		include SPA_nav
-		include SPA_main
+		.navWrapper
+			include SPA_nav
+			include SPA_main
